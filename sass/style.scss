@@ -1,0 +1,25 @@
+.container {
+    width: 950px;
+    // border: 1px solid black;
+    margin: 0 auto;
+}
+* {
+    font-family: 'MuseoModerno', sans-serif;
+}
+@media (max-width: 991px) {
+    .container {
+        width: 730px; 
+    }
+}
+@media (max-width: 767px) {
+    .container {
+        width: 80%; 
+    }
+}
+
+@import '_promo.scss';
+@import '_advantages.scss';
+@import '_consultation.scss';
+@import '_button.scss';
+
+
