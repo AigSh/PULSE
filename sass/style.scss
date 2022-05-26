@@ -1,7 +1,10 @@
 .container {
     width: 950px;
-    // border: 1px solid black;
+    border: 1px solid black;
     margin: 0 auto;
+}
+section {
+    border: 1px solid red;
 }
 * {
     font-family: 'MuseoModerno', sans-serif;
@@ -21,5 +24,6 @@
 @import '_advantages.scss';
 @import '_consultation.scss';
 @import '_button.scss';
-
+@import '_slider.scss';
+@import '_catalog.scss';
 
