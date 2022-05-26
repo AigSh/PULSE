@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/slick.css"/>
     <link rel="stylesheet" href="css/style.min.css">
     <title>PULSE</title>
 </head>
 <body>
-    <div class="promo">
+    <section class="promo">
         <div class="container">
             <div class="promo__header">
                 
@@ -59,9 +60,9 @@
                 </div>    
             </div>
         </div>    
-    </div>
+    </section>
 
-    <div class="advantages">
+    <section class="advantages">
        <div class="container">
             <div class="advantages__title">
                 НАШИ ПРЕИМУЩЕСТВА   
@@ -87,25 +88,44 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="consultation">
+    <section class="consultation">
         <div class="container">
             <div class="consultation__wrapper">
-                <div class="consultation__title">Получите бесплатную консультацию <br>
-                    по подбору пульсометра </div>
-                <div class="consultation__subtitle">Просто заполните форму заявки <br> и мы перезвоним вам в течении 10 минут</div>
-               
-                    <form action="#" class="consultation__form">
-                        <input type="text" placeholder="Ваше имя" name="name" required>
-                        <input type="tel" placeholder="Ваше телефон" name="phone" required>
-                        <input type="email" placeholder="Ваше E-mail" name="email" required> 
-                        <button class="button button_consultation">заказать кОНСУЛЬТАЦИЮ</button>
-                    </form>
+                <div class="consultation__title">Получите бесплатную консультацию <br> по подбору пульсометра 
                 </div>
-                               
+                <div class="consultation__subtitle">Просто заполните форму заявки <br> и мы перезвоним вам в течении 10 минут
+                </div>
+               
+                <form action="#" class="consultation__form">
+                    <input type="text" placeholder="Ваше имя" name="name" required>
+                    <input type="tel" placeholder="Ваше телефон" name="phone" required>
+                    <input type="email" placeholder="Ваше E-mail" name="email" required> 
+                    <button class="button button_consultation">заказать кОНСУЛЬТАЦИЮ</button>
+                </form>
+            </div>                               
+        </div>        
+    </section>
+
+    <section class="slider">
+        <div class="container">
+            <div class="slider__inner">
+                <div><img src="./img/slider/slide_1.png" alt="slider1"></div>
+                <div><img src="./img/slider/slide_2.png" alt="slider2"></div>
+                <div><img src="./img/slider/slide_3.png" alt="slider3"></div>
+
             </div>
         </div>
-    </div>
+    </section>
+
+    <section class="catalog">
+        
+    </section>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
