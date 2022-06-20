@@ -37,7 +37,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    padding-left: 0;
 }
 
 .dots li {
@@ -52,8 +52,12 @@
     border: none;
 }
 .dots li.slick-active button {
-    background-color: black;
+    background-color: #C70101;
     
 }
 
-
+@media (max-width: 767px) {
+    .slider { 
+        padding: 50px 0;
+    }
+}
