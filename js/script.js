@@ -28,8 +28,8 @@ $(document).ready(function(){
             dotsClass: 'dots',
           }
         },
-    ] 
-  });
+      ] 
+    });
     
 
 
@@ -39,6 +39,31 @@ $(document).ready(function(){
         .addClass('catalog__tab_active').siblings().removeClass('catalog__tab_active')
         .closest('div.container').find('div.catalog__content').removeClass('catalog__content_active').eq($(this).index()).addClass('catalog__content_active');
     });
+
+    $('ul.catalog-slider__tabs').on('click', 'li:not(.catalog-slider__tab_active)', function() {
+      $(this)
+        .addClass('catalog-slider__tab_active').siblings().removeClass('catalog-slider__tab_active')
+
+        .closest('div.container').find('div.catalog-slider__content').removeClass('catalog-slider__content_active').eq($(this).index()).addClass('catalog-slider__content_active');
+
+        $('.catalog-slider__content').slick('refresh');
+    });
+
+    
+    $('.reviews__wrapper').on('click', 'a.reviews-item__more', function() {
+      $(this)       
+        .closest('div.container').find('div.reviews-item_forhidden').removeClass('reviews-item_hidden')
+        .closest('div.container').find('a.reviews-item__turn').removeClass('reviews-item__more-turn_hidden')
+        .closest('div.container').find('a.reviews-item__more').addClass('reviews-item__more-turn_hidden');
+    });
+
+    $('.reviews__wrapper').on('click', 'a.reviews-item__turn', function() {
+      $(this)       
+        .closest('div.container').find('div.reviews-item_forhidden').addClass('reviews-item_hidden')
+        .closest('div.container').find('a.reviews-item__turn').addClass('reviews-item__more-turn_hidden')
+        .closest('div.container').find('a.reviews-item__more').removeClass('reviews-item__more-turn_hidden');
+    });
+
 
 
 
@@ -72,4 +97,19 @@ $(document).ready(function(){
     toggleSlide('.catalog-item__link');
     toggleSlide('.catalog-item__back');
 
-  });
+    function toggleSlide(item) {
+      $(item).each(function(i) {
+        $(this).on('click', function(e) {
+          e.preventDefault();
+          $('.catalog-slider-item__content').eq(i).toggleClass('catalog-slider-item__content_active');
+          $('.catalog-slider-item__list').eq(i).toggleClass('catalog-slider-item__list_active');
+        })
+      })
+    }
+
+    toggleSlide('.catalog-slider-item__link');
+    toggleSlide('.catalog-slider-item__back');
+
+
+
+ });

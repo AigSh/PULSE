@@ -25,6 +25,11 @@ section {
         width: 450px; 
     }
 }
+@media (max-width: 479px) {
+    .container {
+        width: 430px; 
+    }
+}
 
 @import '_promo.scss';
 @import '_advantages.scss';

@@ -1,0 +1,220 @@
+.catalog-slider {
+    &__title {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 45px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #0D0D0D;
+    }
+    &__tabs {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        padding-left: 0;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    &__tab {
+        width: 185px;
+        height: 42px;
+        border: 2px solid #D0D0D0;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 40px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #6B6B6B;
+        margin: 0 5px;
+        cursor: pointer;
+        transform: skewX(-25deg);
+        
+        &:hover {
+            box-shadow: 3px 3px 20px #C70101;
+            border: none;
+            
+        }
+        div {
+            transform: skewX(25deg);
+        }
+        &_active {
+           background-color: #C70101; 
+           border: none;
+           color: #fff;
+        }
+    }
+
+    &__content {
+        display: none;
+        &_active {
+            display: block;
+        }
+        
+    }
+
+    &__wrapper {
+        width: 300px;
+        margin: 0 auto;
+    }
+    .slick-prev, .slick-next {
+        img {
+            width: 80%;
+        }
+    } 
+    .dots li button{
+        height: 11px;
+        border-radius: 100%;
+    }
+    
+
+}
+.button_catalog-slider_basket {
+    display: none;
+}
+.catalog-slider-item {
+    position: relative;
+    width: 303px;
+    height: 442px;
+    padding: 20px;
+    border: 2px solid #E8E8E8;
+    margin-top: 19px;
+    overflow: hidden;
+    &__img {
+        display: block;
+        margin: 0 auto;
+        height: 200px;
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 25px;
+        text-align: center;
+        color: #0D0D0D;
+        margin-top: 15px;
+    }
+    &__descr {
+        margin-top: 15px;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 22px;
+        text-align: center;
+        color: #0D0D0D;
+    }
+    &__link {
+        display: block;
+        margin-top: 10px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 14px;
+        text-align: center;
+        text-decoration-line: underline;
+        text-transform: uppercase;
+        color: #C70101;
+        &:hover {
+            color: #C70101;
+        }
+    }
+    hr {
+        margin: 17px 0;
+    }
+    &__buy {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__oldprice {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 14px;
+        text-decoration-line: line-through;
+        color: #555555;
+        margin-top: 5px;
+    }
+    &__newprice {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 20px;
+        color: #050505;
+        margin-top: 2px;
+    }
+    &__wrapper {
+        display: flex;
+        width: calc(200% + 20px);
+    }
+    &__content {
+        width: 50%;
+        transform: translateX(-100%);
+        transition: 0.5s all;
+        &_active {
+            transform: translateX(0%);
+            margin-right: 20px;
+        }
+    }
+    &__list {
+        position: relative;
+        width: 50%;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 21px;
+        list-style-type: none;
+        margin-bottom: 0;
+        transform: translateX(0%);
+        padding-left: 20px;
+        padding-right: 10px;
+        transition: 0.5s all;
+        &_active {
+            transform: translateX(-100%);
+        }
+        li {
+            position: relative;
+            margin-bottom: 10px;
+            &:before {
+                content: '';
+                width: 5px;
+                height: 5px;
+                background-color:#C70101;
+                position: absolute;
+                left: -15px;
+                top: 7px;
+                
+            }
+        }     
+        
+    }
+    &__back {
+        color: #C70101;
+        text-transform: uppercase;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(calc(-50% - 10px));
+        &:hover {
+            color: #C70101;
+        }
+
+    }
+    
+    
+      
+}
+ 
+
+@media (min-width: 575px) {
+    .catalog-slider {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
